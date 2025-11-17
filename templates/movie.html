@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie List</title>
+</head>
+<body>
+    <h1>ตารางรายชื่อภาพยนตร์</h1>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>MID</th>
+                <th>Movie Name</th>
+                <th>Release Date</th>
+                <th>Genre</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in movies %}
+            <tr>
+                <td>{{ m[0] }}</td>
+                <td>{{ m[1] }}</td>
+                <td>{{ m[2] }}</td>
+                <td>{{ m[3] }}</td>
+                <td>{{ m[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p>
+        <a href="/">กลับหน้าแรก</a>
+    </p>
+</body>
+</html>
